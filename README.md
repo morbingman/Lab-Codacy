@@ -1,54 +1,40 @@
-# This repo is for completing assignment for PRO192
+# Student Management Project
 
-There is nothing much to see here. Since this project uses AI for many coding test
-The task is to create a  basic student management system (NO GUI) CLI only
+## Maven Installation
 
----
+If you do not have Maven installed on your system, you can install it using Chocolatey (choco) on Windows:
 
-# Java Student Management Application
+1. Open an elevated Command Prompt or PowerShell (Run as Administrator).
+2. Run the following command to install Maven:
 
-## Overview
-
-This project is a simple Java-based student information management application developed using Object-Oriented Programming (OOP) principles. It allows managing student records with functionalities to add, delete, search, and display students.
-
-## Codebase Structure
-
-- `SourceCode/src/main/java/model/Student.java`: Defines the `Student` class with attributes (student ID, full name, GPA) and validation.
-- `SourceCode/src/main/java/service/StudentService.java`: Provides services to manage the collection of students.
-- `SourceCode/src/main/java/util/InputUtil.java`: Utility class for input handling and validation.
-- `SourceCode/src/main/java/app/Main.java`: Main application entry point with a command-line interface for user interaction.
-- `SourceCode/src/main.java`: Alternative main entry point without package declaration (may require IDE configuration).
-
-## Java Version
-
-- The project uses Java 11.
-
-## Build and Run Instructions
-
-### Using Maven (recommended)
-
-1. Open a terminal in the `SourceCode` directory.
-2. Compile the project:
-
-```bash
-mvn compile
+```
+choco install maven
 ```
 
-3. Run the application:
+3. After installation, verify Maven is installed correctly by running:
 
-```bash
-mvn exec:java -Dexec.mainClass="app.Main"
+```
+mvn -version
 ```
 
-### Running from SourceCode/src/main.java
+This should display the Maven version and Java version being used.
 
-If you prefer to run the application from `SourceCode/src/main.java` (without package), ensure your IDE or build tool is configured to include `SourceCode/src` as a source folder.
+## Building the Project
 
-Compile and run the `Main` class in `SourceCode/src` accordingly.
+To build the project and create an executable jar file, navigate to the `SourceCode` directory and run:
 
-## Notes
+```
+mvn package
+```
 
-- The project supports up to 100 students.
-- Input validation and error handling are implemented.
-- The command-line interface provides a simple menu for interaction.
+The jar file will be generated in the `SourceCode/target` directory, named `student-management-1.0-SNAPSHOT-shaded.jar`.
 
+## Running the Jar File
+
+To run the generated jar file, use the following command:
+
+```
+java -jar SourceCode/target/student-management-1.0-SNAPSHOT-shaded.jar
+```
+
+This will start the application with the main class `app.Main`.
