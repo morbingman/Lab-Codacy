@@ -4,14 +4,14 @@
 
 If you do not have Maven installed on your system, you can install it using Chocolatey (choco) on Windows:
 
-1. Open an elevated Command Prompt or PowerShell (Run as Administrator).
-2. Run the following command to install Maven:
+Open an elevated Command Prompt or PowerShell (Run as Administrator).
+Run the following command to install Maven:
 
 ```
 choco install maven
 ```
 
-3. After installation, verify Maven is installed correctly by running:
+After installation, verify Maven is installed correctly by running:
 
 ```
 mvn -version
