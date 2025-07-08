@@ -46,7 +46,7 @@ public class Main {
         System.out.println("\nAdd New Student");
         int id = inputUtil.getIntInput("Enter student ID: ");
         String name = inputUtil.getStringInput("Enter student name: ");
-        double gpa = inputUtil.getGpaInput("Enter student GPA (0.0-4.0): ");
+        double gpa = inputUtil.getDblInput("Enter student GPA (0.0-4.0): ");
         
         try {
             service.addStudent(new Student(id, name, gpa));

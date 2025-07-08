@@ -21,14 +21,13 @@ public class InputUtil {
         return scanner.nextLine().trim();
     }
 
-    public double getGpaInput(String prompt) {
+    public double getDblInput(String prompt) {
         while(true) {
             try {
-                double gpa = Double.parseDouble(getStringInput(prompt));
-                if(gpa >= 0.0 && gpa <= 4.0) {
-                    return gpa;
+                double value = Double.parseDouble(getStringInput(prompt));
+                if(value >= 0.0) {
+                    return value;
                 }
-                System.out.println("GPA must be between 0.0 and 4.0");
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a numeric value.");
             }
